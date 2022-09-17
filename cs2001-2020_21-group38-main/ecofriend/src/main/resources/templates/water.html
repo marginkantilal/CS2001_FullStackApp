@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Water</title>
+
+<!-- meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+	integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+	crossorigin="anonymous"></script>
+
+<!-- Popper JS -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" th:href="@{/css/nav.css}">
+<link rel="stylesheet" th:href="@{/css/footer.css}">
+
+<!-- Page Styling -->
+<link rel="stylesheet" th:href="@{/css/water.css}">
+
+
+</head>
+
+
+<body>
+	<!------------------------ Navbar--------------------------->
+	<div th:replace="nav :: navbar"></div>
+
+
+
+	<!-- Page -->
+
+	<div class="water_title">
+		<h1>Learn More About The Global Water Crisis</h1>
+	</div>
+
+	<div class="container features">
+		<div class="row">
+			<div class="col-lg-6 col-md-4 col-sm-12">
+				&nbsp
+				<h3 class="feature-title">785 million people don't have access
+					to clean water near their home.</h3>
+				<p>(https://www.wateraid.org/facts-and-statistics) (accessed
+					08/02/2021)</p>
+			</div>
+			<div class="col-lg-6 col-md-4 col-sm-12">
+				&nbsp
+				<h3 class="feature-title">"Diarrhoea caused by dirty water and
+					poor toilets kills a child under 5 every 2 minutes."</h3>
+				<p>(https://www.wateraid.org/facts-and-statistics) (accessed
+					08/02/2021)</p>
+			</div>
+			<div class="col-lg-6 col-md-4 col-sm-12">
+				&nbsp
+				<h3 class="feature-title">"31% of schools don’t have clean
+					water."</h3>
+				<p>(https://www.wateraid.org/facts-and-statistics) (accessed
+					08/02/2021)</p>
+			</div>
+			<div class="col-lg-6 col-md-4 col-sm-12">
+				&nbsp
+				<h3 class="feature-title">"1 in 4 health care facilities lacks
+					basic water services"</h3>
+				<p>(https://www.un.org/sustainabledevelopment/water-and-sanitation/)
+					(accessed 08/02/2021)</p>
+			</div>
+			<div class="col-lg-6 col-md-4 col-sm-12">
+				&nbsp
+				<h3 class="feature-title">"Women and girls are responsible for
+					water collection in 80 per cent of households without access to
+					water on premises."</h3>
+				<p>(https://www.un.org/sustainabledevelopment/water-and-sanitation/)
+					(accessed 08/02/2021)</p>
+			</div>
+			<div class="col-lg-6 col-md-4 col-sm-12">
+				&nbsp
+				<h3 class="feature-title">"Less than 3 per cent of the world’s
+					water is fresh (drinkable), of which 2.5 per cent is frozen in the
+					Antarctica, Arctic and glaciers. Humanity must therefore rely on
+					0.5 per cent for all of man’s ecosystem’s and freshwater needs."</h3>
+				<p>(https://www.un.org/sustainabledevelopment/sustainable-consumption-production/)
+					(accessed 08/02/2021)</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container features">
+		<div class="donate_align">
+			<p>For more information you can visit:</p>
+			<p>https://www.wateraid.org/facts-and-statistics</p>
+			<p>https://www.un.org/sustainabledevelopment/water-and-sanitation/</p>
+			<p>https://www.un.org/sustainabledevelopment/sustainable-consumption-production/</p>
+	
+	</div> 
+</div>
+
+	<div class="container features">
+		<div class="donate_align">
+			<h3>Donate Now to the UK's Dedicated Water Charity</h3>
+			<a class="btn btn-primary" href="https://www.wateraid.org/uk/donate"
+				role="button">DONATE TO WATER AID</a>
+		</div>
+	</div>
+
+<!-- footer -->	
+	
+	<footer class="page-footer">
+		<div class="footer-copyright text-center">EcoFriend 2021</div>
+	</footer>
+
+
+
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- footer -->
+	<div th:replace="footer :: footer"></div>
+	<!--End of Footer -->
+</body>
+
+	<!-- run included HTML -->
+	<script>
+		includeHTML();
+		</script> 
+
+</html>
+
+

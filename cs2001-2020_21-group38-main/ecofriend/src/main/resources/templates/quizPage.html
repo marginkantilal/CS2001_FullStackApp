@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+    <link rel="stylesheet"  th:href="@{/css/quizPage.css}">
+    <link rel="stylesheet"  th:href="@{/css/nav.css}">
+    <link rel="stylesheet"  th:href="@{/css/footer.css}">
+
+
+  </head>
+
+
+  <body>
+  	<!------------------------ Navbar--------------------------->
+	<div th:replace="nav :: navbar"></div>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col col-left">
+
+          <div class="leftBar-header">Quiz List</div>
+
+          <div class="nav leftBar flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+          
+          </div>
+
+        </div>
+        <div class="col-8">
+
+          <div class="quizBox"></div>
+
+          <div class="leftIcon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+            </svg>
+          </div>
+
+          <div class="leftButton">
+            <button type="button" class="btn btn-outline-primary btn-lg">Previous</button>
+          </div>
+
+          <div class="rightButton">
+            <button type="button" class="btn btn-outline-primary btn-lg">Next</button>
+          </div>
+
+          <div class="rightIcon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+            </svg>
+          </div>
+
+          <div class="restartButton">
+            <button type="button" class="btn btn-outline-primary btn-lg">Restart</button>
+          </div>
+
+          <div class="submitButton">  
+            <button type="button" class="btn btn-outline-primary btn-lg">Submit</button>
+          </div>
+
+        </div>
+
+        <div class="col col-right">
+          <div class="timer">Timer</div>
+          <div class="timerBox"></div>
+          <div class="leaderboard">Leaderboard</div>
+          <div class="leaderboardBox">
+            <ul class="leaderboardNames">
+                <li>John 19 Points</li>
+                <li>Sarah 17 Points</li>
+                <li>Bill 13 Points</li>
+                <li>Kenny 10 Points</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+  </div>
+
+   
+	<!-- footer -->
+	<div th:replace="footer :: footer"></div>
+	<!--End of Footer -->
+
+
+  </body>
+        
+</html>

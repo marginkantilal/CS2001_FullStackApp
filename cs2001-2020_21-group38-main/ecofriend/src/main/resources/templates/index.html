@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8" />
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+	crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" th:href="@{/css/homestyle.css}" />
+<!-- CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Footer css  -->
+<link rel="stylesheet" th:href="@{/css/footer.css}" />
+<!-- navigation bar css  -->
+<link rel="stylesheet" th:href="@{/css/nav.css}">
+
+</head>
+
+
+<body>
+	<!------------------------ Navbar--------------------------->
+	<div th:replace="nav :: navbar"></div>
+
+
+
+	<div class="content">
+		<div class="text-left"
+			style="padding: 5%; font-size: 18px; line-height: 1.7; width: 100%; font-family: sans-serif; margin-bottom: 25px;">
+
+
+			<p;>Our goal is to contribute to the UN and help them tackle
+				sustainable development goals. Our product is designed to educate
+				everyone so they have a better understanding of the SDGs and we hope
+				through that understanding everyone can help towards the goal. Our
+				website also helps those who use food banks to find food stock and
+				helps food banks find it’s clients as well as help reduce food waste
+				for restaurants. We also have a page for water to help tackle the
+				water crisis in the world. There are many more things available here
+				from reducing carbon foot prints to discussion forums to even
+				quizzes.</p>
+
+			<div class="container-lg my-3">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<!-- Carousel indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+
+					</ol>
+					<!-- Wrapper for carousel items -->
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<a href="https://sdgs.un.org/goals" target="_blank"><img
+								width="570" height="200"
+								src="https://cdn2.sph.harvard.edu/wp-content/uploads/sites/13/2015/09/sdg-chart.png"
+								alt="SDG GOALS"></a>
+						</div>
+
+						<div class="carousel-item">
+							<a th:href="@{/leaderboard}" target="_blank"> <img
+								width="370" height="160"
+								src="https://missionfitlife.com/wp-content/uploads/2018/09/leaderboard-300x300.png"
+								alt="Second Slide"></a>
+						</div>
+					</div>
+					<!-- Carousel controls -->
+					<a class="carousel-control-prev" href="#myCarousel"
+						data-slide="prev"> <span class="carousel-control-prev-icon"></span>
+					</a> <a class="carousel-control-next" href="#myCarousel"
+						data-slide="next"> <span class="carousel-control-next-icon"></span>
+					</a>
+				</div>
+			</div>
+
+
+
+			<h4 style="margin-bottom: 4px; font-family: sans-serif;">
+				<b> What are the Sustainable Development Goals? </b>
+			</h4>
+			<p;>The Sustainable Development Goals (SDGs), also known as the
+				Global Goals, were adopted by all United Nations Member States in
+				2015 as a universal call to action to end poverty, protect the
+				planet and ensure that all people enjoy peace and prosperity by
+				2030. The 17 SDGs are integrated—that is, they recognize that action
+				in one area will affect outcomes in others, and that development
+				must balance social, economic and environmental sustainability.
+				Through the pledge to Leave No One Behind, countries have committed
+				to fast-track progress for those furthest behind first. That is why
+				the SDGs are designed to bring the world to several life-changing
+				‘zeros’, including zero poverty, hunger, AIDS and discrimination
+				against women and girls. Everyone is needed to reach these ambitious
+				targets. The creativity, knowhow, technology and financial resources
+				from all of society is necessary to achieve the SDGs in every
+				context.</p>
+			<p;>Here is a video briefly explaining all 17 goals:</p>
+			<iframe width="650" height="285"
+				src="https://www.youtube.com/embed/0XTBYMfZyrM" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+			<p;>
+				<br> For more information on the SDGs or its background, please
+				click <a target="_blank"
+					href="https://www.undp.org/content/undp/en/home/sustainable-development-goals/background/">here</a>
+			</p>
+			<p;>The SDGs replace the Millennium Development Goals (MDGs),
+				which started a global effort in 2000 to tackle the indignity of
+				poverty. The MDGs established measurable, universally-agreed
+				objectives for tackling extreme poverty and hunger, preventing
+				deadly diseases, and expanding primary education to all children,
+				among other development priorities.</p>
+			<h5 style="margin-bottom: 4px; font-family: sans-serif;">
+				<b> Key MDG achievements </b>
+			</h5>
+			<p>
+				- More than 1 billion people have been lifted out of extreme poverty
+				(since 1990) <br> - Child mortality dropped by more than half
+				(since 1990)<br> - The number of out of school children has
+				dropped by more than half (since 1990)<br> - HIV/AIDS
+				infections fell by almost 40 percent (since 2000)
+			</p>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<div th:replace="footer :: footer"></div>
+	<!--End of Footer -->
+</body>
+
+
+</html>

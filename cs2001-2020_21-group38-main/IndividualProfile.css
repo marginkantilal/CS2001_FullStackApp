@@ -1,0 +1,65 @@
+body{
+    background-color: #c8d1d8;
+}
+
+.profile-picture{
+    float: left;
+    margin-left: 60px;
+    margin-top: 20px;
+    border: 2px solid black;
+    width: 250px;
+    height: 250px;
+}
+
+.followButton{
+    margin-left: 60px;
+}
+
+.friendButton{
+    margin-left: 70px;
+}
+
+.aboutMeBox{
+    border: 2px solid black;
+    width: 250px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.proInfoBox{
+    /* border: 1px solid black; */
+    height: 310px;
+}
+
+.name{
+    margin-top: 15px;
+}
+
+.news-feed{
+    margin-left: 170px;
+}
+
+.quiz-info{
+    margin-left: 170px;
+}
+
+.photos{
+    margin-left: 170px;
+}
+
+.proInformation{
+    margin-top: 10px;
+}
+
+.timeLine li{
+    margin-top: 20px;
+     background-color: #343a40;
+}
+
+/* .row{
+    border: 1px solid black;
+}
+.col{
+    border: 1px solid black;
+} */

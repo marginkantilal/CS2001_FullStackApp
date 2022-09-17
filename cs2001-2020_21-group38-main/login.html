@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>EcoFriend | Signin</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+
+    
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!------------------------ Javascript--------------------------->
+    <script src="nav.js"></script>
+
+
+        <link rel="stylesheet" href="login.css"/>
+        <!-- Footer css  -->
+        <link rel="stylesheet" href="footer.css">
+    <!-- nav css  -->
+    <link rel="stylesheet" href="nav.css">
+        <!-- script to call other HTML files -->
+    <script>
+    $(function(){
+        $('#navigation').load('nav.html')
+        $('#footer').load('footer.html')
+    });
+    </script>
+   
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div id='navigation'></div>
+
+    <div class="container text-center">
+        <!--SIGN-IN-->
+        <main class="form-signin">
+            <form>
+                <div class="image">
+                    <img class ="img-fluid" src="Final logo.png">
+                </div>
+                <h4>Select Account Type:</h4>
+                <div class= "buttons">
+                    <div class= "button1">
+                        <button class="w-40btn btn-lg btn-primary" type="submit"> Individual </button>
+                    </div>
+                    <div class="button2">
+                        <button class="w-40btn btn-lg btn-primary" type="submit">Organisation</button>
+                    </div>
+                </div>
+
+                <label for="inputEmail" class="visually-hidden">Email address</label>
+                <input type="email" id="inputEmail" class="form-control" required autofocus>
+                <label for="inputPassword" class="visually-hidden">Password</label>
+                <input type="password" id="inputPassword" class="form-control" required>
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                <a href="#" >Forgotten Password?</a><br/>
+                <a href="#" > Register here</a>
+
+                
+            </form>
+        </main>
+
+
+    </div>
+    <div id='footer'></div>
+</body>
+</html>
+
+
+

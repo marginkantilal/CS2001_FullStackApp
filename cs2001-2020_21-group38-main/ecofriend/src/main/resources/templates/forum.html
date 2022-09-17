@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+   <!------------------------ Font Awesome --------------------------->
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css ">
+   <!------------------------ Google Font --------------------------->
+
+   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Anton&family=Passion+One&display=swap" rel="stylesheet">
+
+   <!------------------------ CSS --------------------------->
+    <link rel="stylesheet"  th:href="@{/css/forum.css}">
+    <link rel="stylesheet"  th:href="@{/css/nav.css}">
+    <link rel="stylesheet"  th:href="@{/css/footer.css}">
+   <!------------------------ Javascript--------------------------->
+ 
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script th:href="@{/js/forum.js}"></script>
+
+  <title>Forum</title>
+
+</head>
+
+<body>
+  	<!------------------------ Navbar--------------------------->
+	<div th:replace="nav :: navbar"></div>
+  
+  <div class="container text-center">
+    <h1>Forum</h1>
+  </div>
+
+
+  <div class="row mb-5 mt-5"> 
+    <div class="col-sm-3 text-center mx-auto">
+        <div class="form mt-4">
+            <div class="form-group">
+                <label for="Category">Choose Category </label>
+                <select class="form-control" id="selectCategory">
+                    <option id="organisation">organisatons</option>
+                    <option>help</option>
+                    <option>other</option>
+                </select>
+            </div>
+
+            <div class="form-input">
+                <label for="inputTopic">Enter Topic</label>
+                <input type="text" class="form-control" placeholder="Topic">
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Here you can start your discussion."></textarea>
+            </div>
+
+            <button type="button" class="btn btn-success mb-2" onclick="createTopic">Create Topic</button>
+        </div>
+
+        <img th:src="@{/image/logo.png}" width="280px" class="img-fluid ml-4 mx-auto"/>
+
+        <div class="form mb-4">
+            <div class="form-group">
+                <label for="Category">Choose Category</label>
+                <select class="form-control" id="selectCategory">
+                    <option>organisatons</option>
+                    <option>help</option>
+                    <option>other</option>
+                </select>
+            </div>
+
+            <div class="form-input">
+                <label for="inputKeyword">Enter Keyword</label>
+                <input type="text" class="form-control" placeholder="Keyword">
+            </div>
+
+            <button type="button" class="btn btn-success mb-2 mt-2" onclick="searchTopic">Search Topic</button>
+        </div>
+    </div> 
+
+ 	  <div class="col-sm-8 mx-auto">
+      <div class="container">
+        <table class="table table-hover" id="forumTable">
+          <thead>
+            <tr>
+              <th>
+                Topic
+              </th>
+              <th>
+                <div class="dropdown">
+                  <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Category
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="categoryButton" oninput="">
+                    <a class="dropdown-item" href="#">Organisatons</a>
+                    <a class="dropdown-item" href="#">Help</a>
+                    <a class="dropdown-item" href="#">Others</a>
+                  </div>
+                </div>
+              </th>
+              <th>
+                <input type="text" id="myInput" onkeyup="filterTable()" placeholder="Search for names.." title="Type in a name">
+              </th>
+              <th>
+                Replies
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="#">Discussion topic name</a>
+              </td>
+              <td>
+                <a hred="#">Help</a>
+              </td>
+              <td>
+                <a href="#">user name1</a>
+              </td>
+              <td>
+                7
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#">topic name</a>
+              </td>
+              <td>
+                <a hred="#">Organisatons</a>
+              </td>
+              <td>
+                <a href="#">user name2</a>
+              </td>
+              <td>
+                22
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#">topic discussion</a>
+              </td>
+              <td>
+                <a hred="#">Others</a>
+              </td>
+              <td>
+                <a href="#">user name3</a>
+              </td>
+              <td>
+                2
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div> 
+  </div> 
+
+	<!-- footer -->
+	<div th:replace="footer :: footer"></div>
+	<!--End of Footer -->
+
+
+</body>
+
+
+</html>

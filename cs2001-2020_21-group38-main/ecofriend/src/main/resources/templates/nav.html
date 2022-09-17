@@ -1,0 +1,84 @@
+<!------------------------ Javascript--------------------------->
+<script th:href="@{/js/nav.js}"></script>
+
+<!------------------------ Navbar--------------------------->
+
+<!--Nav opening tag-->
+<div th:fragment="navbar">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-sm-start">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="" th:href="@{/index}">
+            <img src="" th:src="@{/image/logo.png}" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto float-left">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/" th:href="@{/index}">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Food</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                        <a class="dropdown-item" href="" th:href="@{/foodwaste}"> Food Waste & Donation Points</a>
+                        <a class="dropdown-item" href="" th:href="@{/foodinfo}"> Healthy Eating</a>
+                        <a class="dropdown-item " href="" th:href="@{/donate}"> Donate</a>
+                        <a class="dropdown-item " href="" th:href="@{/foodlist}"> Donation list</a>
+                    </div>
+                </li>
+
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Energy</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <a class="dropdown-item" href="" th:href="@{/Energy1}"> Reduce your carbon footprint</a>
+                        <a class="dropdown-item" href="" th:href="@{/Energy2}"> Benefits of saving energy</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="" th:href="@{/Water}">Water</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="" th:href="@{/leaderboard}">Leaderboard</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="" th:href="@{/quizPage}">Quiz</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
+
+
+                        <a class="dropdown-item" href="" th:href="@{/IndividualProfile}"> User Profile</a>
+                        <a class="dropdown-item" href="" th:href="@{/user profile}"> Organisation Profile</a>
+                        <a class="dropdown-item" href="" th:href="@{/login}"> Login</a>
+                        <a class="dropdown-item" href="" th:href="@{/registration}"> Register</a>
+
+                    </div>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="" th:href="@{/forum}">Forum</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/contact}">Contact us</a>
+                    </li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- Search form -->
+    <form role="form">
+        <div class="form-group">
+            <input type="text" class="form-control empty" id="iconified" placeholder="&#xF002; Search" />
+        </div>
+    </form>
+</nav>
+</div>
+<!--End of nav tag-->

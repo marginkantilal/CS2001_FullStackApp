@@ -1,0 +1,40 @@
+body
+{
+    font-family: 'Alegreya Sans SC', 'sans-serif';
+    font-size: 17px;
+    background-color: rgb(199, 208, 216);
+}
+
+.frame
+{
+    border: 2px solid gray;
+    border-radius: 12px;
+}
+
+h1
+{
+    font-size: 36px;
+    margin: 20px;
+    color: rgb(119, 147, 36);
+}
+
+.col-sm-4
+{
+    background-color:rgb(199, 208, 216);
+    margin-top: 50px;
+}
+
+.table
+{
+    background-color: lightgoldenrodyellow;
+}
+
+h3
+{
+    text-align: center;
+}
+
+.btn-group
+{
+    background-color: gray;
+}

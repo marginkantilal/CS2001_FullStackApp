@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!------------------------ Font Awesome --------------------------->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css ">
+    <!------------------------ Google Font --------------------------->
+
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Anton&family=Passion+One&display=swap" rel="stylesheet">
+
+     <link rel="stylesheet"  th:href="@{/css/nav.css}">
+    <link rel="stylesheet"  th:href="@{/css/footer.css}">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 	<script  th:href="@{/js/leaderboard.js}"></script>
+    <link rel="stylesheet"  th:href="@{/css/leaderboard.css}">
+    <title>Leaderboard</title>
+
+
+</head>
+
+<body onload="sortTable();">
+	<!------------------------ Navbar--------------------------->
+	<div th:replace="nav :: navbar"></div>
+
+    <div class="container text-center mt-3">
+        <button type="button" class="btn btn-success float-left" onclick="backToFood()">Back To Food Page</button>
+        <h1>Leaderboard</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 rounded-pill text-center mb-5 frame">
+                <img th:src="@{/image/logo.png}" width="280px" class="img-fluid ml-4" />
+                <h3>Your organisation</h3>
+                <p>current rank: </p>
+                <p>food donated: </p>
+                <button type="button" class="btn btn-success mb-3" onclick="donateMore()">Donate More</button>
+            </div>
+
+            <div class="col-sm-7 offset-md-1 mt-5">
+                <h3 id="monthYear">Ranking this month</h3>
+
+                <div class="btn-group float-right mt-2 frame" role="group">
+                    <button type="button" class="btn btn-success" onclick="thisMonth()">this month</button>
+                    <button type="button" class="btn btn-success ml-1" onclick="thisYear()">this year</button>
+                </div>
+
+                <table class="table table-hover rounded mb-5 frame" id="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">pic</th>
+                            <th scope="col">Organisation</th>
+                            <th scope="col">food donated</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">1</td>
+                            <td data-field="pic">pic</td>
+                            <td data-field="name">name</td>
+                            <td data-field="food">43</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">2</td>
+                            <td data-field="pic">pic</td>
+                            <td data-field="name">name</td>
+                            <td data-field="food">8</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">3</td>
+                            <td data-field="pic">pic</td>
+                            <td data-field="name">name</td>
+                            <td data-field="food">7</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">4</td>
+                            <td data-field="pic">pic</td>
+                            <td data-field="name">name</td>
+                            <td data-field="food">82</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">5</td>
+                            <td data-field="pic">pic</td>
+                            <td data-field="name">name</td>
+                            <td data-field="food">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+               
+            </div>
+        </div>
+
+    </div>
+
+	<!-- footer -->
+	<div th:replace="footer :: footer"></div>
+	<!--End of Footer -->
+
+</body>
+
+
+</html>

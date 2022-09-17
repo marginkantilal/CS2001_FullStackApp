@@ -1,0 +1,164 @@
+    body {
+        min-height: 100%;
+    }
+    /*---------------------- Donate Page CSS-------------------------*/
+    
+    .div-wrapper {
+        border: 2px solid transparent;
+        border-radius: 5px;
+        background-color: #dff3e6;
+    }
+    /*---------------------- Headings-------------------------*/
+    
+    .title {
+        color: rgb(0, 0, 0)!important;
+        font-size: 1.6rem;
+        padding-top: 20px;
+        text-align: center;
+        padding-bottom: 2px;
+    }
+    
+    .donate {
+        color: rgb(0, 0, 0)!important;
+    }
+    /*---------------------- input and textarea-------------------------*/
+    
+    .item,
+    .quantity {
+        font-size: 14px;
+        color: grey;
+        /*placeholder font colour*/
+    }
+    /*---------------------- Buttons -------------------------*/
+    
+    #donatebtn,
+    #findRestBtn,
+    #addRestBtn,
+    #addbtn,
+    #leaderboardbtn {
+        background-color: #0bcc05;
+        border: 0;
+        margin: 4px auto;
+        color: #fff;
+        border-radius: 1px;
+        text-transform: uppercase;
+        padding: 10px 22px;
+        letter-spacing: 1px;
+        font-size: 14px;
+    }
+    #findRestBtn:hover,
+    #donatebtn:hover,
+    #leaderboardbtn:hover,
+    #addbtn:hover,
+    #addRestBtn:hover {
+        background: #f06406;
+    }
+    
+    #resetbtn {
+        border: 0;
+        margin: 4px auto;
+        color: #fff;
+        border-radius: 1px;
+        text-transform: uppercase;
+        padding: 10px 22px;
+        letter-spacing: 1px;
+        font-size: 14px;
+    }
+    
+    #sharebtn {
+        border: 0;
+        margin: 4px auto;
+        color: #fff;
+        border-radius: 1px;
+        text-transform: uppercase;
+        padding: 10px 22px;
+        letter-spacing: 1px;
+        font-size: 14px;
+    }
+    /*---------------------- Headings-------------------------*/
+    
+    .heading-primary {
+        font-family: 'Anton', sans-serif;
+        font-size: 1.4rem;
+        margin-top: 20px;
+        margin-left: 20px;
+        color: rgb(13, 14, 12)!important;
+    }
+    /*---------------------- Labels-------------------------*/
+    
+    .form-label {
+        color: rgb(13, 14, 12)!important;
+    }
+    /*Modal*/
+    /*----------------------  Social Media Icons-------------------------*/
+    
+    #icons {
+        font-size: 50px;
+        color: rgb(122, 218, 13) !important;
+    }
+    
+    .btn-secondary {
+        background-color: rgb(122, 218, 13) !important;
+        ;
+    }
+    /*---------------------- Food List Page-------------------------*/
+    /*Find food bank section*/
+    
+    .page-section {
+        background-color: #f06406 !important;
+        padding: 5%;
+        overflow: hidden;
+    }
+    /*title*/
+    
+    .search-title {
+        color: rgb(0, 0, 0)!important;
+        font-size: 2.5rem;
+    }
+    
+    .finder__field {
+        text-align: center;
+    }
+    
+    .input-field {
+        width: 25%;
+        text-align: center;
+        border: 3px solid transparent;
+        border-radius: 2%;
+    }
+    /*Search button*/
+    
+    #findplace-btn {
+        border: 1px solid transparent;
+        border-radius: 10%;
+        background-color: rgb(122, 218, 13);
+        color: #fff;
+    }
+    /*google map*/
+    
+    #map {
+        right: 10%;
+        height: 60%;
+    }
+    
+    #modal-success {
+        width: 100%;
+        height: 100%;
+        z-index: 99999;
+        background-color: white;
+        position: absolute;
+        top: 0;
+    }
+
+    /*Find restaurant page*/
+
+.findRestaurant-center{
+  position:absolute;
+  top:50%;
+  left:50%;
+  padding:10px;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  background-color: #dff3e6;
+}

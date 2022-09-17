@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+	crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" th:href="@{/css/feedback.css}" />
+<script th:href="@{/js/nav.js}"></script>
+<!-- navigation bar css  -->
+<link rel="stylesheet" th:href="@{/css/nav.css}">
+<link rel="stylesheet" th:href="@{/css/footer.css}">
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+	<!------------------------ Navbar--------------------------->
+	<div th:replace="nav :: navbar"></div>
+
+	<div class="content">
+		<div class="text-left">
+			<h2 style="text-align: center; margin-bottom: -4px;">GET IN
+				TOUCH</h2>
+			<p
+				style="text-align: center; margin-top: -20px; padding: 4%; font-size: 14px; line-height: 1.5; width: 100%; font-family: sans-serif; margin-bottom: 5px;">
+				Got any questions or feedback for us? We would love to hear from you
+				so please fill out the contact form to send us a message. <br>
+				And we will respond as soon as possible!
+			</p>
+		</div>
+	</div>
+
+
+
+	<div class="container features">
+		<div class="row" style="margin-bottom: 75px;">
+			<div class="col-lg-4 col-md-4 col-sm-12"
+				style="font-size: 14px; margin-left: 5px; font-family: sans-serif;">
+				<h3>
+					<br> <br> <u> Information </u>
+				</h3>
+				<p>
+					<br> Brunel University <br> Kingston Lane <br>
+					Uxbridge <br> London, UB8 3PH <br>
+					EcoFriendBrunel@gmail.com <br> Number: 020 41665 651
+				</p>
+			</div>
+
+			<!--contact section start-->
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="contact-section" style="width: 500px;">
+					<h2 style="text-align: center;">Contact Us</h2>
+					<div class="contact-form"
+						style="background-color: #EAEDED; border-radius: 25px;">
+
+						<form th:action="@{/contact}" class="textbox"
+							style="text-align: center;" action="" method="POST"
+							th:object="${feedback}">
+							<div>
+
+								<input type="text"
+									style="height: 35px; width: 270px; margin-top: 6px; margin-bottom: 15px;"
+									th:field="*{firstName}" placeholder="First Name" required>
+							</div>
+							<div>
+
+								<input type="text"
+									style="height: 35px; width: 270px; margin-bottom: 15px;"
+									th:field="*{lastName}" placeholder="Last Name" required>
+							</div>
+							<div>
+
+								<input type="text"
+									style="height: 35px; width: 270px; margin-bottom: 15px;"
+									th:field="*{email}" placeholder="Email address" required>
+							</div>
+							<div>
+
+								<input type="text" style="height: 80px; width: 270px;"
+									th:field="*{message}" placeholder="Type your message here..."
+									required>
+							</div>
+
+
+							<input type="submit" name=""
+								style="margin-top: 6px; margin-bottom: 6px;" value="Submit">
+						</form>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div th:replace="footer :: footer"></div>
+	<!--End of Footer -->
+</body>
+</html>

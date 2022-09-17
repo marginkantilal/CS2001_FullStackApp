@@ -1,0 +1,78 @@
+<html>
+<head>
+<style>
+.boxed{
+border:1px solid black;
+padding:20px;
+margin:10px;
+display:inline-block;
+}
+</style>
+</head>
+<body>
+
+<script>
+var total=0;
+
+function addFoodDonation(){
+total+= +document.getElementById("foodValue").value;
+document.getElementById("totalValue").value=total;
+alert(document.getElementById("foodValue").value +" added in Food Donations");
+document.getElementById("foodValue").value='';
+}
+
+function addEnergyDonation(){
+total+= +document.getElementById("energyValue").value;
+document.getElementById("totalValue").value=total;
+alert(document.getElementById("energyValue").value +" added in Energy Donations");
+document.getElementById("energyValue").value='';
+}
+
+function addWaterDonation(){
+total+= +document.getElementById("waterValue").value;
+document.getElementById("totalValue").value=total;
+alert(document.getElementById("waterValue").value +" added in Water Donations");
+document.getElementById("waterValue").value='';
+}
+
+</script>
+
+
+<div class="boxed">
+<span>Food Donation</span>
+</div>
+<input type="number" id="foodValue">
+<input type="submit" value="Add" id="btn1" onclick="addFoodDonation()">
+
+</br>
+
+
+<div class="boxed">
+Energy Saving
+</div>
+<input type="number" id="energyValue">
+<input type="submit" value="Add" id="btn2" onclick="addEnergyDonation()">
+
+</br>
+
+
+<div class="boxed">
+Water Saving
+</div>
+<input type="number" id="waterValue">
+<input type="submit" value="Add" id="btn3" onclick="addWaterDonation()">
+</br><br>
+<label> TOTAL ACTIVITY DONE </label>
+<input type="text" id="totalvalue" readonly>
+
+<script>
+</script>
+<br>
+<br>
+<br>
+
+<a href="user profile.html">
+    <button>back</button>
+  </a>
+</body>
+</html>

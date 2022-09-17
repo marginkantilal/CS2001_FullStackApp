@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>  
+    <!-- JavaScript -->
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js'></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+    <link rel="stylesheet" href="forumDiscussion.css">
+
+    <link rel="stylesheet" href="footer.css">
+
+    <link rel="stylesheet" href="nav.css">
+
+    <script>
+        $(function(){
+            $('#footer').load('footer.html')
+            $('#navigation').load('nav.html')
+        });
+
+        $(function() {
+
+        $('.replyButton').on('click', function() {
+        $('.replyBox').hide();
+        var commentboxId= $(this).attr('data-commentbox');
+        $('#'+commentboxId).toggle();
+        });
+
+        $('.cancelButton').on('click', function() {
+        $('.replyBox').hide();
+        });
+
+        });
+    </script>
+
+  </head>
+
+  <body>
+
+    <div id='navigation'></div>
+
+    <!-- 1st Card-->
+
+    <div class="container-fluid mt-100">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <div class="media flex-wrap w-100 align-items-center"> <img src="proPic.jpg" class="d-block ui-w-40 rounded-circle" alt="">
+                            <div class="media-body ml-3"> <a href="javascript:void(0)" data-abc="true">James Bond</a>
+                                <div class="text-muted small">13 days ago</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h>
+                            Sustainable energy is energy produced and used in such a way that it "meets the needs of the present without compromising the ability of future generations to meet their own needs." It is similar to the concepts of green energy and clean energy in its consideration of environmental impacts, however formal definitions of sustainable energy also include economic and social impacts.
+                        </h>
+                    </div>
+                    <div class="card-footer d-flex flex-wrap justify-content-between align-items-center px-0 pt-0 pb-3">
+                        <div class="px-4 pt-3"> <a href="javascript:void(0)" class="text-muted d-inline-flex align-items-center align-middle" data-abc="true"> <i class="fa fa-heart text-danger"></i>&nbsp; <span class="align-middle">3 Replies</span> </a> <span class="text-muted d-inline-flex align-items-center align-middle ml-4"> <i class="fa fa-eye text-muted fsize-3"></i>&nbsp; <span class="align-middle">24 Views</span> </span> </div>
+                        <div class="px-4 pt-3"> <button type="button" class="btn btn-primary"><i class="ion ion-md-create"></i>&nbsp; Reply</button></div>
+                    </div>
+
+                    <!-- 1st Collapsed Chat-->
+
+                    <div class="collapsable-comment">
+                        <div class="d-flex flex-row justify-content-between align-items-center action-collapse p-2" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-3" href="#collapse-3"><button class="btn btn-light" type="button">Show Comments</button><i class="fa fa-chevron-down servicedrop"></i></div>
+                        <div id="collapse-3" class="collapse">
+                            
+                            <div class="commented-section mt-2">
+                                <div class="d-flex flex-row align-items-center commented-user">
+                                    <div class="media2 media flex-wrap w-100 align-items-center"> <img src="proPic.jpg" class="d-block ui-w-40 rounded-circle" alt="">
+                                        <h6 class="mr-2">Zeus</h6><span class="mb-1 ml-2">4 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="comment-text-sm"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div>
+                                <div class="reply-section">
+                                    <div class="d-flex flex-row align-items-center voting-icons"><i class="fa fa-sort-up fa-2x mt-3 hit-voting"></i><i class="fa fa-sort-down fa-2x mb-3 hit-voting"></i>
+                                        <button type="button" class="replyButton btn btn-light btn-sm" data-commentBox="panel1">Reply</button>
+                                        <div class="replyBox" id="panel1" style="display:none"><textarea cols="200" rows="3"></textarea><br/><button class="cancelButton">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="commented-section mt-2">
+                                <div class="d-flex flex-row align-items-center commented-user">
+                                    <div class="media2 media flex-wrap w-100 align-items-center"> <img src="proPic.jpg" class="d-block ui-w-40 rounded-circle" alt="">
+                                        <h6 class="mr-2">Hercules</h6></span><span class="mb-1 ml-2">5 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="comment-text-sm"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</span></div>
+                                <div class="reply-section">
+                                    <div class="d-flex flex-row align-items-center voting-icons"><i class="fa fa-sort-up fa-2x mt-3 hit-voting"></i><i class="fa fa-sort-down fa-2x mb-3 hit-voting"></i>
+                                        <button type="button" class="replyButton btn btn-light btn-sm" data-commentBox="panel2">Reply</button>
+                                        <div class="replyBox" id="panel2" style="display:none"><textarea cols="200" rows="3"></textarea><br/><button class="cancelButton">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="commented-section mt-2">
+                                <div class="d-flex flex-row align-items-center commented-user">
+                                    <div class="media2 media flex-wrap w-100 align-items-center"> <img src="proPic.jpg" class="d-block ui-w-40 rounded-circle" alt="">
+                                        <h6 class="mr-2">Ares</h6><span class="mb-1 ml-2">10 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="comment-text-sm"><span>Nunc sed id semper risus in hendrerit gravida rutrum. Non odio euismod lacinia at quis risus sed. Commodo ullamcorper a lacus vestibulum sed arcu non odio euismod. Enim facilisis gravida neque convallis a. In mollis nunc sed id. Adipiscing elit pellentesque habitant morbi tristique senectus et netus. Ultrices mi tempus imperdiet nulla malesuada pellentesque.</span></div>
+                                <div class="reply-section">
+                                    <div class="d-flex flex-row align-items-center voting-icons"><i class="fa fa-sort-up fa-2x mt-3 hit-voting"></i><i class="fa fa-sort-down fa-2x mb-3 hit-voting"></i>
+                                        <button type="button" class="replyButton btn btn-light btn-sm"data-commentBox="panel3">Reply</button>
+                                        <div class="replyBox" id="panel3" style="display:none"><textarea cols="200" rows="3"></textarea><br/><button class="cancelButton">Cancel</button><br/><br/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>    
+                    <!-- End of 1st Collapsed Chat-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of 1st card-->
+
+    <!-- Start of 2nd Card-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <div class="media flex-wrap w-100 align-items-center"> <img src="proPic.jpg" class="d-block ui-w-40 rounded-circle" alt="">
+                            <div class="media-body ml-3"> <a href="javascript:void(0)" data-abc="true">Lil Wayne</a>
+                                <div class="text-muted small">15 days ago</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h>
+                            Usage of carbon footpring on the website as well as donation to a specific food bank...
+                        </h>
+                    </div>
+                    <div class="card-footer d-flex flex-wrap justify-content-between align-items-center px-0 pt-0 pb-3">
+                        <div class="px-4 pt-3"> <a href="javascript:void(0)" class="text-muted d-inline-flex align-items-center align-middle" data-abc="true"> <i class="fa fa-heart text-danger"></i>&nbsp; <span class="align-middle">3 Replies</span> </a> <span class="text-muted d-inline-flex align-items-center align-middle ml-4"> <i class="fa fa-eye text-muted fsize-3"></i>&nbsp; <span class="align-middle">13 Views</span> </span> </div>
+                        <div class="px-4 pt-3"> <button type="button" class="btn btn-primary"><i class="ion ion-md-create"></i>&nbsp; Reply</button> </div>
+                    </div>
+
+                    <!-- Collapsed chat for 2nd card-->
+                    <div class="collapsable-comment">
+                        <div class="d-flex flex-row justify-content-between align-items-center action-collapse p-2" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-2" href="#collapse-2"><button class="btn btn-light" type="button">Show Comments</button><i class="fa fa-chevron-down servicedrop"></i></div>
+                        <div id="collapse-2" class="collapse">
+                            <div class="commented-section mt-2">
+                                <div class="d-flex flex-row align-items-center commented-user">
+                                    <div class="media2 media flex-wrap w-100 align-items-center"> <img src="proPic.jpg" class="d-block ui-w-40 rounded-circle" alt="">
+                                        <h6 class="mr-2">Athena</h6><span class="mb-1 ml-2">4 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="comment-text-sm"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div>
+                                <div class="reply-section">
+                                    <div class="d-flex flex-row align-items-center voting-icons"><i class="fa fa-sort-up fa-2x mt-3 hit-voting"></i><i class="fa fa-sort-down fa-2x mb-3 hit-voting"></i>
+                                        <button type="button" class="replyButton btn btn-light btn-sm"data-commentBox="panel4">Reply</button>
+                                        <div class="replyBox" id="panel4" style="display:none"><textarea cols="200" rows="3"></textarea><br/><button class="cancelButton">Cancel</button><br/><br/></div>
+                                </div>
+                            </div>
+                            <div class="commented-section mt-2">
+                                <div class="d-flex flex-row align-items-center commented-user">
+                                    <div class="media2 media flex-wrap w-100 align-items-center"> <img src="proPic.jpg" class="d-block ui-w-40 rounded-circle" alt="">
+                                        <h6 class="mr-2">Hades</h6><span class="mb-1 ml-2">5 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="comment-text-sm"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</span></div>
+                                <div class="reply-section">
+                                    <div class="d-flex flex-row align-items-center voting-icons"><i class="fa fa-sort-up fa-2x mt-3 hit-voting"></i><i class="fa fa-sort-down fa-2x mb-3 hit-voting"></i>
+                                        <button type="button" class="replyButton btn btn-light btn-sm"data-commentBox="panel5">Reply</button>
+                                        <div class="replyBox" id="panel5" style="display:none"><textarea cols="200" rows="3"></textarea><br/><button class="cancelButton">Cancel</button><br/><br/></div>
+                                </div>
+                            </div>
+                            <div class="commented-section mt-2">
+                                <div class="d-flex flex-row align-items-center commented-user">
+                                    <div class="media2 media flex-wrap w-100 align-items-center"> <img src="proPic.jpg" class="d-block ui-w-40 rounded-circle" alt="">
+                                        <h6 class="mr-2">Poseidon</h6><span class="mb-1 ml-2">10 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="comment-text-sm"><span>Nunc sed id semper risus in hendrerit gravida rutrum. Non odio euismod lacinia at quis risus sed. Commodo ullamcorper a lacus vestibulum sed arcu non odio euismod. Enim facilisis gravida neque convallis a. In mollis nunc sed id. Adipiscing elit pellentesque habitant morbi tristique senectus et netus. Ultrices mi tempus imperdiet nulla malesuada pellentesque.</span></div>
+                                <div class="reply-section">
+                                    <div class="d-flex flex-row align-items-center voting-icons"><i class="fa fa-sort-up fa-2x mt-3 hit-voting"></i><i class="fa fa-sort-down fa-2x mb-3 hit-voting"></i>
+                                        <button type="button" class="replyButton btn btn-light btn-sm"data-commentBox="panel6">Reply</button>
+                                        <div class="replyBox" id="panel6" style="display:none"><textarea cols="200" rows="3"></textarea><br/><button class="cancelButton">Cancel</button><br/><br/></div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>    
+                    <!--End of 2nd collapsed chat-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of 2nd Card-->
+
+    <!-- <div id='footer'></div>    -->
+
+  </body>
+
+  
+  <script>
+    includeHTML();
+    </script> 
+
+</html>

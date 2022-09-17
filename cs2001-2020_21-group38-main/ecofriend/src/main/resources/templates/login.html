@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author"
+	content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.79.0">
+<title>EcoFriend | Signin</title>
+
+<link rel="canonical"
+	href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+<link rel="stylesheet" th:href="@{/css/login.css}" />
+
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
+
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	crossorigin="anonymous"></script>
+<!-- Footer css  -->
+<link rel="stylesheet" th:href="@{/css/footer.css}" />
+<script th:href="@{/js/nav.js}"></script>
+<!-- navigation bar css  -->
+<link rel="stylesheet" th:href="@{/css/nav.css}">
+<link rel="stylesheet" th:href="@{/css/footer.css}">
+
+</head>
+<body>
+
+	<!------------------------ Navbar--------------------------->
+	<div th:replace="nav :: navbar"></div>
+
+	<!-- main content -->
+	<div class="container text-center">
+		<!--SIGN-IN-->
+		<main class="form-signin">
+			<form th:action="@{/login}" method="post">
+				<div class="image">
+					<img src="" class="img-fluid" th:src="@{/image/Final logo.png}"
+						alt="" />
+				</div>
+				<!-- error message -->
+				<div th:if="${param.error}">
+					<div class="alert alert-danger">Invalid username or password.</div>
+				</div>
+
+				<!-- logout message -->
+				<div th:if="${param.logout}">
+					<div class="alert alert-info">You have been logged out.</div>
+				</div>
+				<h4>Select Account Type:</h4>
+				<div class="buttons">
+					<div class="button1">
+						<button class="w-40btn btn-lg btn-primary" type="submit">
+							Individual</button>
+					</div>
+					<div class="button2">
+						<button class="w-40btn btn-lg btn-primary" type="submit">Organisation</button>
+					</div>
+				</div>
+
+
+				<label for="username"> Username </label> : <input type="email"
+					class="form-control" id="username" name="username"
+					placeholder="Enter Email ID" autofocus="autofocus"> <label
+					for="password">Password</label>: <input type="password"
+					id="password" name="password" class="form-control"
+					placeholder="Enter Password" />
+				<div>
+					Remember me <input type="checkbox" name="remember-me" />
+				</div>
+
+
+				<button class="w-100 btn btn-lg btn-primary" id="login-submit"
+					name="login-submit" input type="submit">Sign in</button>
+
+			</form>
+			<!-- Forget password -->
+			<a th:href="@{/forgotpassword}">Forgotten Password?</a><br /> <a
+				href="/" th:href="@{/registration}">Register here</a>
+				<br> <br><br>
+		</main>
+
+	</div>
+
+	<!-- footer -->
+	<div th:replace="footer :: footer"></div>
+	<!--End of Footer -->
+
+</body>
+
+
+</html>
+
+
+

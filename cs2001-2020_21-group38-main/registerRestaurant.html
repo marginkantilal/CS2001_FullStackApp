@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Friend | Register Restaurant</title>
+    <!------------------------ Font Awesome --------------------------->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css ">
+
+
+    <!------------------------ Google Font --------------------------->
+
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Anton&family=Passion+One&display=swap" rel="stylesheet">
+    <!------------------------ Bootstap links--------------------------->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- JavaScript -->
+      <!-- Axios JavaScript -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" crossorigin="anonymous"></script> 
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!------------------------ CSS --------------------------->
+    <!-- Navigation bar css  -->
+    <link rel="stylesheet" href="/nav.css">
+    <!-- main CSS bar css  -->
+    <link rel="stylesheet" href="/donation.css">
+    <!--main js file-->
+    <script src="main.js "></script>
+
+    <!-- Footer css  -->
+    <link rel="stylesheet" href="/footer.css">
+
+
+    <!--Loading navbar and footer to this page-->
+    <script>
+        $(function() {
+
+            $('#footer').load('footer.html')
+            $('#navigation').load('nav.html')
+        });
+    </script>
+</head>
+
+<body>
+    <!------------------------ Navbar--------------------------->
+    <div id='navigation'></div>
+    <!------------------------ Main Content--------------------------->
+    <!--Main -->
+    <main>
+        <div class="col-xs-12" style="height:50px;"></div>
+
+        <!--div Container-->
+        <div class="container">
+            <!--h1 of the page-->
+            <h1 class="heading-primary">Restaurant Registration</h1>
+            <!--div Content Container -->
+            <div class="content-container">
+                <!--row -->
+                <div class="row">
+                    <!--center div -->
+                    <div class="center col-9 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center">
+                        <!-- div-->
+                        <div class="div-to-align-center">
+                            <h3 class="title">Restaurant Details</h3>
+                            <!--form-->
+                            <form id="addRestaurant-form"  name="myform">   
+                           <!--     <input id="my-modal" name="my-modal" value="false" hidden> by default modal is hidden-->
+
+                                <!--div-->
+                                <div class="form-outline mb-2">
+                                    <input id="name-field" name="name"  type="text" class="form-control " placeholder="Name*" required>
+                                </div>
+                                <!--end of div-->
+                                <!--div-->
+                                <div class="form-outline mb-2">
+                                    <input id="address-field" name="address" type="text" class="form-control" placeholder="Address*" required>
+                                </div>
+                                <!--end of div-->
+
+                                 <!--div-->
+                                 <div class="form-outline mb-2">
+                                    <input id="phone-field" name="phonenumber" type="text" class="form-control" placeholder="Phone number*" required>
+                                </div>
+                                <!--end of div-->
+
+                                <!--div-->
+                                <div class="form-outline mb-3">
+                                    <!-- Trigger the modal with a button -->
+                                    <button type="submit" id="addbtn" class="btn-primary" onclick="performAddRequest()">Add</button>
+                                    <!-- Reset input text with a button -->
+                                    <button type="reset" id="resetbtn" class=" btn-primary resetbtn"><i class="fas fa-undo"></i>Reset</button>
+                                </div>
+                                <!--end of div-->
+
+                            </form>
+                            <!-- end of form-->
+                            
+                          
+
+                            <!--div-->
+                            <div class="form-outline">
+                                <a href="/donate.html"><button id="leaderboardbtn" class="btn-primary ">Donate</button></a>
+                            </div>
+
+                            <div class="form-result" id="postResultElement"></div>
+
+                        </div>
+                        <!-- end of div  -->
+
+                    </div>
+                    <!--end of center div-->
+                    <!--div-->
+                </div>
+                <!--end of Content Container-->
+            </div>
+            <!--end of row  div-->
+        </div>
+        <!--end of Content Container div-->
+        </div>
+        <!--end of Container div-->
+    </main>
+    <!--end of Main -->
+    
+
+    
+
+    <!--Footer -->
+    <footer>
+        <div id='footer'></div>
+    </footer>
+    <!--End of Footer -->
+
+    <!--Modal js file
+    <script src="modal.js"></script>-->
+
+
+</body>
+<!--end of body tag-->
+
+
+</html>
+<!--End of html tag-->

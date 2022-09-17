@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Friend | Donate Page</title>
+    <!------------------------ Font Awesome --------------------------->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css ">
+
+
+    <!------------------------ Google Font --------------------------->
+
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Anton&family=Passion+One&display=swap" rel="stylesheet">
+    <!------------------------ Bootstap links--------------------------->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- JavaScript -->
+    
+    <!-- Axios JavaScript -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" crossorigin="anonymous"></script> 
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+      <!------------------------ Navbar Javascript--------------------------->
+        <script src="nav.js"></script>
+
+    <!------------------------ CSS --------------------------->
+    <!-- Navigation bar css  -->
+    <link rel="stylesheet" href="/nav.css">
+    <!-- main CSS bar css  -->
+    <link rel="stylesheet" href="/donation.css">
+    <!--main js file-->
+    <script src="main.js "></script>
+
+    <!-- Footer css  -->
+    <link rel="stylesheet" href="/footer.css">
+
+
+    <!--Loading navbar and footer to this page-->
+    <script>
+        $(function() {
+
+            $('#footer').load('footer.html')
+            $('#navigation').load('nav.html')
+        });
+    </script>
+</head>
+
+<body onload="onLoad()">
+    <!------------------------ Navbar--------------------------->
+    <div id='navigation'></div>
+    <!------------------------ Main Content--------------------------->
+    <!--Main -->
+    <main>
+        <div class="col-xs-12" style="height:50px;"></div>
+
+        <!--div Container-->
+        <div class="container">
+            <!--h1 of the page-->
+            <h1 class="heading-primary">Donation page</h1>
+            <!--div Content Container -->
+            <div class="content-container">
+                <!--row -->
+                <div class="row">
+                    <!--center div -->
+                    <div class="center col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center">
+                        <!-- div-->
+                        <div class="div-to-align-center">
+                            <h3 class="title">Donation Details</h3>
+                            <!--form-->
+                            <form id="donation-form" name="myform">   
+                                <input id="my-modal" name="my-modal" value="false" hidden><!--by default modal is hidden-->
+
+                                <!--div-->
+                                <div class="form-outline mb-3">
+                                    <input id="res-Id" name="restaurant-id" type="text" class="form-control" placeholder="Restaurant ID*" required>
+                                </div>
+
+                                <div class="form-outline mb-3">
+                                    <input name="quantity"  type="number" class="form-control" placeholder="Quantity*" id="quantity-field" required>
+                                </div>
+                                <!--end of div-->
+                                <!--div-->
+                                <div class="form-outline mb-3">
+                                    <textarea id="description-field" name="description" type="text" class="form-control item" placeholder="Item Description*" required></textarea>
+                                </div>
+                                <!--end of div-->
+
+                                <!--btn div-->
+                                <div class="form-outline mb-3">
+                                    <!--checks the condition, stores data in the db and display success modal if successfully -->
+                                    <button type="submit" id="donatebtn" class="btn-primary" onclick="checkValidation()">Donate</button>
+                                    <!-- Clear text button --> 
+                                    <button type="reset" id="resetbtn" class=" btn-primary resetbtn"><i class="fas fa-undo"></i>Reset</button>
+                                </div>
+                                <!--end of div-->
+                            </form>
+                            <!-- end of form-->
+                            
+                            <!--div-->
+                            <div class="form-outline">
+                                <a href="/leaderboard.html"><button id="leaderboardbtn" class="btn-primary ">Leaderboard</button></a>
+                                <!-- find restaurant record page display once clicked--> 
+                            <a href="/findRestaurantByName.html"> <button  id="addbtn" class=" btn-primary">Check Restaurant Record</button></a>
+                            </div>
+                            <!--div-->
+
+
+                        </div>
+                        <!-- end of div  -->
+
+                    </div>
+                    <!--end of center div-->
+                </div>
+                <!--end of Content Container-->
+            </div>
+            <!--end of row  div-->
+        </div>
+        <!--end of Content Container div-->
+        
+    </main>
+    <!--end of Main -->
+    
+    <!--Modal excutes only when the input is entered and clicks donate button-->
+    <!-- modal div-->
+    <div id="modal-success">
+            <!-- modal-dialog div-->
+        <div class="modal-dialog modal-dialog-centered">
+                    <!--modal-content div-->
+            <div class="modal-content">
+                        <!--modal-header div-->
+                <div class="modal-header">
+                         <!--modal header title-->
+                    <h4 class="title donate">Donation Successful</h4>
+                        <!--Close button-->
+                         <button type="button" class="close" onclick="closeModal()" >
+                        <span id="close-toggle">&times;</span>
+                       </button>
+                </div>
+                
+                    <!--end of modal-header div-->
+        <!--modal-body div-->
+        <div class="modal-body">
+            <p>Thank you for donating</p>
+            <a href=""> <i id="icons" class="fab fa-facebook"></i></a>
+            <a href=""> <i id="icons" class="fab fa-twitter"></i></a>
+            <a href=""> <i id="icons" class="fab fa-instagram"></i></a>
+        </div>
+        <!--end of-modal-body div-->
+        <!--modal footer-->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" onclick="closeModal()">Close</button>
+        </div>
+        <!--end of modal footer-->
+    </div>
+    <!--end of modal-content div-->
+ </div>
+    <!--end of modal-dialog div-->
+</div>
+     <!-- End of Modal -->
+    
+
+    <!--Footer -->
+    <footer>
+        <div id='footer'></div>
+    </footer>
+    <!--End of Footer -->
+
+    <!--Modal js file-->
+    <script src="modal.js"></script>
+
+
+</body>
+<!--end of body tag-->
+
+
+</html>
+<!--End of html tag-->

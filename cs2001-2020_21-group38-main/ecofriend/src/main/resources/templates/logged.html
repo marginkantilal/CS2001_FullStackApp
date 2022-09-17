@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8" />
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+	crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" th:href="@{/css/homestyle.css}" />
+<!-- CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Footer css  -->
+<link rel="stylesheet" th:href="@{/css/footer.css}" />
+<!-- navigation bar css  -->
+<link rel="stylesheet" th:href="@{/css/nav.css}">
+
+</head>
+
+
+<body>
+	<!------------------------ Navbar--------------------------->
+	<div th:replace="nav :: navbar"></div>
+
+
+	<div class="container" style = "text-align: center;">
+		<div class="col-xs-12" style="height:150px;"></div>
+		
+	<h1>	Welcome <span sec:authentication="principal.username"> User</span></h1>
+			<div> <br> <br>
+					<a th:href="@{/index}"><button class="" style = "width:125px;height:50px; background-color:lightgreen;">Home</button></a>
+		</div>
+						<div> <br>
+					<a th:href="@{/contact}"><button class="" style = "width:125px;height:50px; background-color:#6699ff;">Message Us</button></a>
+		 </div>
+				<div> <br>
+					<a th:href="@{/logout}"><button class="" style = "width:125px;height:50px;">Logout</button></a>
+		 </div>
+					<div> <br>
+	<a th:href="@{/delete}"><button class="" style = "width:125px;height:50px; background-color:#ff4d4d;">Delete account</button></a>
+	</div>
+
+	</div>
+		<!-- footer -->
+	<div th:replace="footer :: footer"></div>
+	<!--End of Footer -->
+</body>
+</html>

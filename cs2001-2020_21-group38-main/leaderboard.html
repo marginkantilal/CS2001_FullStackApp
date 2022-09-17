@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!------------------------ Font Awesome --------------------------->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css ">
+    <!------------------------ Google Font --------------------------->
+
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Anton&family=Passion+One&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+     <!-- Axios JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     
+    <!-- JavaScript -->
+    
+          <!------------------------ Navbar Javascript--------------------------->
+          <script src="nav.js"></script>
+
+          <!------------------------ CSS --------------------------->
+          <!-- Navigation bar css  -->
+          <link rel="stylesheet" href="/nav.css">
+          <!-- main CSS bar css  -->
+          <link rel="stylesheet" href="/donation.css">
+          <!--main js file-->
+          <script src="main.js "></script>
+      
+          <!-- Footer css  -->
+          <link rel="stylesheet" href="/footer.css">
+          
+    <title>Leaderboard</title>
+
+    <!-- script to call other HTML files -->
+    <script>
+        $(function() {
+
+            $('#footer').load('footer.html')
+            $('#navigation').load('nav.html')
+        });
+    </script>
+</head>
+
+<body onload="onLoad()">
+    <!------------------------ Navbar--------------------------->
+    <!-- nav bar HTML-->
+    <div id='navigation'></div>
+
+    <div class="container text-center mt-3">
+        <button type="button" class="btn btn-success float-left" onclick="backToFood()">Back To Food Page</button>
+        <h1>Leaderboard</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- orgnaisation box with logo , current rank and food donated -->
+            <div class="col-sm-4 rounded-pill text-center mb-5 frame">
+                <img src="logo.png" alt="logo of Ecofriend organisation" width="280" class="img-fluid ml-4" />
+                <h3>Your organisation</h3>
+                <p>current rank: </p>
+                <p id="foodDonated">food donated: </p>
+                <label>
+                    <input type="number" class="form-control ml-4" id="donateNo">
+                    <button type="submit" class="btn btn-success mb-3" onclick="donateMore()">Donate More</button>
+                </label>
+                
+                
+            </div>
+
+            <!-- Leaderboard table-->
+            <div class="col-sm-7 offset-md-1 mt-5">
+                <h3 id="monthYear">Ranking this month</h3>
+
+                <div class="btn-group float-right mt-2 frame" role="group">
+                    <button type="button" class="btn btn-success" onclick="thisMonth()">this month</button>
+                    <button type="button" class="btn btn-success ml-1" onclick="thisYear()">this year</button>
+                </div>
+
+                <table class="table table-hover rounded mb-5 frame" id="table">
+                    <thead>
+                        <tr>
+                            <th id="rank" scope="col">#</th>
+                            <th id="restaurant-Name" scope="col">Restaurant Name</th>
+                            <th id="total-Donation" scope="col">Food donated</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    
+    <script src="leaderboard.js"></script>
+
+    <div id='footer'></div>
+
+</body>
+</html>

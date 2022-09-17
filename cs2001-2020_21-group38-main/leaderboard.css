@@ -1,0 +1,51 @@
+/*main page style*/
+body
+{
+    font-family: 'Alegreya Sans SC', 'sans-serif';
+    font-size: 17px;
+    background-color: rgb(199, 208, 216);
+}
+/*frame around your organisation box*/
+.frame
+{
+    border: 2px solid gray;
+    border-radius: 12px;
+}
+/*leaderboard main page heading*/
+h1
+{
+    font-size: 36px;
+    margin: 20px;
+    color: rgb(119, 147, 36);
+}
+/*container with donation and logo*/
+.col-sm-4
+{
+    background-color:rgb(199, 208, 216);
+    margin-top: 50px;
+}
+/*leaderboard table*/
+.table
+{
+    background-color: white;
+    border-radius: 40px;
+}
+
+/*ranking this month heading*/
+h3
+{
+    text-align: center;
+}
+
+/*ranking this month/year button*/
+.btn-group
+{
+    background-color: gray;
+}
+/*input donate number*/
+#donateNo
+{
+    width: 70px;
+    height: 25px;
+    border-radius: 40px;
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author"
+	content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.79.0">
+<title>EcoFriend | Sign Up</title>
+
+<link rel="canonical"
+	href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+<link rel="stylesheet" th:href="@{/css/register.css}" />
+
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
+
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	crossorigin="anonymous"></script>
+<!-- Footer css  -->
+
+<script th:href="@{/js/nav.js}"></script>
+<!-- navigation bar css  -->
+<link rel="stylesheet" th:href="@{/css/nav.css}">
+<link rel="stylesheet" th:href="@{/css/footer.css}">
+
+</head>
+<body>
+	<!------------------------ Navbar--------------------------->
+	<div th:replace="nav :: navbar"></div>
+
+
+	<div class="container text-center">
+
+		<main class="form-signin">
+
+			<form th:action="@{/registration}" class="textbox" action=""
+				method="POST" th:object="${user}">
+				<img class="img-fluid" th:src="@{/image/Final logo.png}"> <br />
+				<h4>Register Your Account</h4>
+				<div class="dropdown-select">
+					<label for="selectType" class="visually-hidden">Select
+						Account Type</label> <select class="form-control" id="inputType"
+						th:field="*{account}">
+						<option th:value="'Organisation'" th:text="Organisation">
+						</option>
+						<option th:value="'Individual'" th:text="Individual"></option>
+					</select>
+				</div>
+				<div class="register-form">
+					<label for="Name" class="visually-hidden">Username</label> <input
+						type="text" th:field="*{firstName}" class="form-control" required
+						autofocus> <label for="inputEmail" class="visually-hidden">Email
+						address</label> <input type="email" id="inputEmail" name=""
+						th:field="*{email}" class="form-control" required autofocus>
+					<label for="inputPassword" class="visually-hidden">Password</label>
+					<input type="password" id="inputPassword" th:field="*{password}"
+						class="form-control" required>
+					<button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+				</div>
+			</form>
+
+		</main>
+	</div>
+	<!-- footer -->
+	<div th:replace="footer :: footer"></div>
+	<!--End of Footer -->
+</body>
+</html>

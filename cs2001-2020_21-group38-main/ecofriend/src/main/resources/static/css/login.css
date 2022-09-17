@@ -1,0 +1,143 @@
+html,
+body {
+  height: 100%;
+  
+}
+body {
+  background: #f2f2f2;
+}
+
+/*---------------------- Smaller Screen -------------------------*/
+
+
+.navbar .nav-item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.dropdown-toggle::after {
+   transition: transform 0.15s linear; 
+}
+
+.show.dropdown .dropdown-toggle::after {
+  transform: translateY(3px);
+}
+
+/*---------------------- Navbar -------------------------*/
+
+.nav-link{
+  font-size: 16px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  color: #fff !important;
+  font-weight: 700;
+  margin: 5px;
+
+}
+
+/*---------------------- Dropdownmenu -------------------------*/
+
+.dropdown-menu{
+      font-size: 14px;
+      margin: 3px;
+      background: rgb(228, 93, 3);
+
+  
+}
+/*---------------------- Hover Effects -------------------------*/
+
+.nav-link:hover{
+  color: rgb(122, 218, 13) !important;
+}
+
+.dropdown-item:hover{
+  color: rgb(122, 218, 13) !important;
+}
+
+
+/*---------------------- Logo -------------------------*/
+
+.navbar-brand img{
+  margin: 0 auto;
+  height: 100px;
+  width: 110px;
+
+}
+
+
+/*---------------------- Search bar-------------------------*/
+.dropdown-menu {
+  margin-top: 0;
+}
+
+.form-group input {
+  top: 134px;
+  position: absolute;
+  left: 73%;
+  width: 22%;
+
+}
+input.empty {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 200;
+  text-decoration: inherit;
+  padding: 5px;
+  font-size: 14px;
+  line-height:24px;
+  border:1px solid #ddd;
+  border-radius:3px;
+    
+    
+  }
+body {
+  /* display: flex; */
+  align-items: center;
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  
+}
+
+.form-signin .button1 {
+  float: left;
+}
+
+.form-signin .button2 {
+  float: right;
+}
+
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/*Forgot password*/
+
+div #brandLogo{
+	width:200px;
+	height:140px
+}

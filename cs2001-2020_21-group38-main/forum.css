@@ -1,0 +1,44 @@
+/*main page styling*/
+body
+{
+    font-family: 'Alegreya Sans SC', 'sans-serif';
+    font-size: 17px;
+    background-color: rgb(199, 208, 216)!important;
+}
+/*main forum heading*/
+h1
+{
+    font-size: 36px;
+    margin: 20px;
+    color: rgb(119, 147, 36);
+}
+/*left control panel styling*/
+.col-sm-3
+{
+    border: 2px solid gray;
+    border-radius: 12px;
+}
+/*create/search topic forms inner styling*/
+.form
+{
+    border: 2px solid gray;
+    border-radius: 12px;
+}
+/*input field(only) styling*/
+.form-input
+{
+    border: 2px solid gray;
+    border-radius: 12px;
+}
+/*list of topics*/
+.col-sm-8
+{
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 12px;
+}
+/*page footer*/
+.footer 
+{
+    position: relative !important;
+}

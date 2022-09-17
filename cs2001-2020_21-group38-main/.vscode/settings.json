@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "172.31.82.135",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "ecofriend",
+            "database": "ecofriend",
+            "username": "root",
+            "password": "Ecofriend38"
+        }
+    ]
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Friend | Find Restaurant</title>
+    <!------------------------ Font Awesome --------------------------->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css ">
+
+
+    <!------------------------ Google Font --------------------------->
+
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Anton&family=Passion+One&display=swap" rel="stylesheet">
+    <!------------------------ Bootstap links--------------------------->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    
+     
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" crossorigin="anonymous"></script> 
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!------------------------navbar Javascript--------------------------->
+        <script src="nav.js"></script>
+
+    
+    <!------------------------ CSS --------------------------->
+    <!-- Navigation bar css  -->
+    <link rel="stylesheet" href="/nav.css">
+
+    <!-- Footer css  -->
+    <link rel="stylesheet" href="/footer.css">
+    <!-- main CSS bar css  -->
+    <link rel="stylesheet" href="/donation.css">
+
+    <!--Loading navbar and footer to this page-->
+    <script>
+        $(function() {
+
+            $('#footer').load('footer.html')
+            $('#navigation').load('nav.html')
+        });
+    </script>
+</head>
+
+<body>
+    <!------------------------ Navbar--------------------------->
+    <div id='navigation'></div>
+
+    <!------------------------ Main Content--------------------------->
+    <div class="findRestaurant-center">    
+        <!--div conainter-->
+        <div class="container">
+                    <!--div row-->
+                        <div class="row">
+                            <!--div placing the alignment to the center-->
+                            <div class="col-sm-6 col-sm-offset-3 well offset4">
+                                <!--div text content-->
+                                    <div class="text-success">
+                                        <h1 class="title">Check Restaurant Record</h1>
+                                    </div>
+                                    <!--end of div-->
+
+                                    <!--section body-->
+                                        <div id="title">
+                                          <input type="text" class="form-control" id="name-field" 
+                                          placeholder="Restaurant Name*" required=true/><br/>
+                                          <button id="findRestBtn" class="btn btn-primary" 
+                                          onclick="getRestaurant()">Find Restaurant</button> <!--calling for rest api in the backend-->
+                                              <a href="/registerRestaurant.html">
+                                                <button id="addRestBtn" class="btn btn-primary ">Add Restaurant</button></a><!--Links to register restaurant page-->
+                                             
+                                                <a href="/donate.html"
+                                              ><button id="donatebtn" class="btn btn-primary ">Donate</button></a><!--Links to donate page-->
+                                          <div class="section-body" id="resultElement">
+
+                                          </div><!--Shows the result-->
+                                      </div>
+                                      <!--end of section-->
+
+                                </div>
+                                <!--end of col div-->
+                               
+                        </div>
+                        <!--end of div-->
+
+         </div>
+                            <!-- end of div conainter-->
+    </div>
+        <!------------------------ end of main div--------------------------->
+
+    <!--Footer -->
+    <footer>
+        <div id='footer'></div>
+    </footer>
+    <!--End of Footer -->
+
+    <!--Modal js file
+    <script src="modal.js"></script>-->
+ 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+</body>
+<!--end of body tag-->
+
+
+</html>
+<!--End of html tag-->

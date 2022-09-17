@@ -1,0 +1,14 @@
+.App {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 50px 10px;
+}
+
+.qPage {
+  display: table;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  padding: 30px;
+}

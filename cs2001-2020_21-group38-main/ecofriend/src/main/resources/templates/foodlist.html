@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eco Friend | Food List</title>
+<!------------------------ Font Awesome --------------------------->
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css ">
+
+
+<!------------------------ Bootstap links--------------------------->
+
+<!-- CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+	crossorigin="anonymous">
+	
+</script>
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!------------------------ Google Font --------------------------->
+<link
+	href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Anton&family=Passion+One&display=swap"
+	rel="stylesheet">
+
+
+<link rel="stylesheet" th:href="@{/css/nav.css}">
+<link rel="stylesheet" th:href="@{/css/footer.css}">
+<link rel="stylesheet" th:href="@{/css/donation.css}">
+<link rel="stylesheet" th:href="@{/js/donation.js}">
+
+</head>
+
+<body>
+	<!------------------------ Navbar--------------------------->
+	<div th:replace="nav :: navbar"></div>
+
+	<!------------------------ Main Content--------------------------->
+	<!--Main-->
+	<main>
+		<div class="container mt-1">
+			<!--List Content-->
+			<div class="foodlist">
+				<h1 class="heading-primary text-center">Donate Item Lists</h1>
+				<div id="list" class="list-group-flush ">
+					<a href="#" class="list-group-item list-group-item-action">Item
+						1</a> <a href="#" class="list-group-item list-group-item-action">Item
+						2</a> <a href="#" class="list-group-item list-group-item-action">Item
+						3</a> <a href="#" class="list-group-item list-group-item-action">Item
+						4</a> <a href="#" class="list-group-item list-group-item-action">Item
+						5</a> <a href="#" class="list-group-item list-group-item-action">Item
+						6</a> <a href="#" class="list-group-item list-group-item-action">Item
+						7</a>
+				</div>
+			</div>
+			<!--End of List Content-->
+
+			<!--Button Content-->
+			<div class="container text-left mt-1">
+				<div class="btn-group">
+					<a href="/donate.html">
+						<button type="button" id="donatebtn" class="btn-primary mr-3">Donate</button>
+					</a> <a href="/leaderboard.html"><button type="button"
+							id="leaderboardbtn" class="btn-primary">Leaderboard</button></a>
+				</div>
+			</div>
+			<!--End Of Button Content-->
+		</div>
+	</main>
+	<!--End of Main-->
+
+	<!--Section-->
+	<section
+		class="[ page-section   page-section--th ]  grid--full text-center mt-5">
+		<div class="grid">
+			<div class="container">
+				<h2 class="search-title">Find a Food Bank</h2>
+				<form action="">
+					<div class="finder__field">
+						<input class="input-field" type="text" name="foodbank-search"
+							id="find-foodbank" placeholder="Town, city or postcode"
+							autocomplete="off">
+					</div>
+
+					<button id="findplace-btn" class=" btn mt-1">
+						<i class="fa fa-search"></i>Search
+					</button>
+				</form>
+			</div>
+
+		</div>
+	</section>
+	<!--End of Section-->
+	<!-- footer -->
+	<div th:replace="footer :: footer"></div>
+	<!--End of Footer -->
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+	crossorigin="anonymous">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+
+<!-- CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" th:href="@{/css/IndividualProfile.css}">
+<link rel="stylesheet" th:href="@{/css/nav.css}">
+<link rel="stylesheet" th:href="@{/css/footer.css}">
+
+
+
+
+</head>
+
+
+<body>
+
+	<!------------------------ Navbar--------------------------->
+	<div th:replace="nav :: navbar"></div>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="profile-picture"></div>
+				<div class="buttons">
+					<button type="button" class="btn followButton btn-success">Follow</button>
+					<button type="button" class="btn friendButton btn-success">Add
+						Friend</button>
+				</div>
+			</div>
+
+			<div class="col-9">
+				<div class="proInfoBox">
+					<div class="name">
+						<h5>Name: Tergelbold Olonbold</h5>
+					</div>
+					<div class="score">
+						<h5>Score: ######</h5>
+					</div>
+					<div class="badges">
+						<h6>Badges:</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="aboutMeBox">
+					<h6>About me</h6>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+						eum laborum corrupti. Non quaerat deserunt vitae, provident unde
+						magnam nisi numquam eius aut. Obcaecati eum ducimus autem.
+						Asperiores, maiores ipsum.</p>
+				</div>
+			</div>
+
+			<div class="col-9">
+				<ul class="nav timeLine nav-tabs nav-fill">
+					<li class="nav-item"><a class="nav-link" href="#">News
+							Feed</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Photos</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Quiz
+							Info</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<div th:replace="footer :: footer"></div>
+	<!--End of Footer -->
+</body>
+
+
+
+</html>

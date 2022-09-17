@@ -1,0 +1,89 @@
+body{
+    background-color: #c8d1d8;
+  }
+
+  .row{
+    border: 1px solid black; 
+  }
+
+  .col{
+    border: 1px solid black; 
+  }
+
+  .leftBar{
+    margin-top: 40px;
+  }
+
+  .quizBox{
+    border:2px solid black;
+    width: 1000px;
+    height: 500px;
+  }
+
+  .leftIcon{
+      color: blue;
+    float: left;
+  }
+
+  .leftButton{
+    float: left;
+  }
+
+  .rightButton{
+    float: left;
+    margin-left: 30px;
+  }
+
+  .rightIcon{
+      color: blue;
+    float: left;
+  }
+
+  .restartButton{
+    float: left;
+    margin-left: 475px;
+  }
+
+  .submitButton{
+    float: left;
+    margin-left: 30px;
+  }
+
+  .leftBar-header{
+    font-size: 25px;
+    color: white;
+  }
+
+  .col-left{
+    background-color: #343a40;
+  }
+
+  .col-right{
+    background-color: #343a40;
+  }
+
+  .timer{
+    font-size: 25px;
+    color: white;
+  }
+
+  .timerBox{
+    border: 2px solid white;
+    height: 200px;
+  }
+
+  .leaderboard{
+    margin-top: 50px;
+    font-size: 20px;
+    color: white;
+  }
+
+  .leaderboardBox{
+    border: 2px solid white;
+    height: 270px;
+  } 
+
+  .leaderboardNames{
+      font-size: 15px;
+      color: white;
+  }

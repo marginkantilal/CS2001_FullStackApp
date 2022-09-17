@@ -1,0 +1,87 @@
+<!DOCTYPE>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head> 
+		<meta charset="utf-8" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<!-- Footer css  -->
+    <link rel="stylesheet"  th:href="@{/css/nav.css}">
+    <link rel="stylesheet"  th:href="@{/css/footer.css}">
+
+
+	<title>EcoFriend | Energy</title>
+
+</head>
+
+			  	<!------------------------ Navbar--------------------------->
+	<div th:replace="nav :: navbar"></div>
+
+		<div class="jumbotron text-center">
+			<h1>Energy</h1>
+			<p>Benefits of saving energy</p>
+		  </div>
+
+
+		<div class="container text-center">
+		<div class="sec_A">
+			
+			<div class="row">
+			  <div class="col">
+				<h3>Column 1a</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			  </div>
+			  <div class="col">
+				<h3>Column 2</h3>
+				<p>image here</p>
+			  </div>
+			  <div class="col">
+				<h3>Column 3</h3>
+				<p>images</p>
+			  </div>
+			</div>
+		  </div>
+		
+
+
+
+		  <div class="container"></div>
+		  <div class="row">
+			<div class="col-sm">
+			  <h3></h3>
+			</div>
+			<div class="col-sm">
+				<h3>Easy ways you can save energy</h3>
+			  </div>
+			  <div class="col-sm">
+				<h3></h3>
+			  </div>
+		  </div>
+		</div>
+
+
+		  <div class="container"></div>
+			<div class="Sec_Eff">
+			  <div class="col-md-auto">
+				<h3></h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			  <br> <br> <br>
+			  </div>
+			</div>
+
+		<!-- footer -->
+	<div th:replace="footer :: footer"></div>
+	<!--End of Footer -->
+
+	</body>
+
+
+</html>
